@@ -13,7 +13,7 @@
                             <th>Estacion</th>
                             <th>Descripcion</th>
                             <th>Latitud</th>
-                            <th>Longuitud</th>
+                            <th>Longitud</th>
                         </tr>
                     </thead>
                     <tbody id="userData">

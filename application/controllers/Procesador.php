@@ -56,3 +56,4 @@ class Procesador extends CI_Controller
     
 }
 
+}
