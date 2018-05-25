@@ -11,9 +11,9 @@
 <body>
    
     <form method="post" action="" class="form">
-            <label for="estacion">Title</label>
+            <label for="station">Title</label>
             <input type="text" class="form-control" name="station" placeholder="Nombre estacion" ><br>           
-            <label for="descripcion">Descripción</label>
+            <label for="description">Descripción</label>
             <input type="text" class="form-control" name="description" placeholder="Descripcion ruta" > <br>           
             <input type="text" class="form-control" name="latitude" placeholder="Valor latitud" > <br>           
             <input type="text" class="form-control" name="length" placeholder="Valor longitud" > <br>           
