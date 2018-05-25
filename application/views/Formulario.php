@@ -10,21 +10,21 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Estacion</th>
-                            <th>Descripcion</th>
-                            <th>Latitud</th>
-                            <th>Longitud</th>
+                            <th>Station</th>
+                            <th>Description</th>
+                            <th>Latitude</th>
+                            <th>Length</th>
                         </tr>
                     </thead>
                     <tbody id="userData">
                         <?php if(!empty($rutas)){ 
-                            foreach($rutas as $estacion){ ?>
+                            foreach($rutas as $station){ ?>
                         <tr>
-                            <td><?php echo $estacion['id']; ?></td>
-                            <td><?php echo $estacion['estacion']; ?></td>
-                            <td><?php echo $estacion['descripcion']; ?></td>
-                            <td><?php echo $estacion['latitud']; ?></td>
-                            <td><?php echo $estacion['longuitud']; ?></td>
+                            <td><?php echo $station['id']; ?></td>
+                            <td><?php echo $station['station']; ?></td>
+                            <td><?php echo $station['description']; ?></td>
+                            <td><?php echo $station['latitude']; ?></td>
+                            <td><?php echo $station['length']; ?></td>
                         </tr>
                             <?php }
                         }?>
@@ -32,6 +32,6 @@
                     </tbody>
                 </table>
               </div>
-    <a href="<?php echo site_url('Procesador/agregar')?>">Agregar Ruta</a>
+    <a href="<?php echo site_url('Procesador/agregar')?>">Add Rute</a>
 </body>
 </html>

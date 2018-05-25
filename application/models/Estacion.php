@@ -9,7 +9,7 @@ class Estacion extends CI_Model{
     
 function obtenerListado($id = "")
 {
-   $query = $this->db->get('estacion');
+   $query = $this->db->get('station');
    return $query->result_array();
    
 }
@@ -18,7 +18,7 @@ function obtenerListado($id = "")
     public function insertarRuta($data = array()) {
         
         $data['id']='NULL';
-        $insertar = $this->db->insert('estacion', $data);
+        $insertar = $this->db->insert('station', $data);
         
         if($insertar){
             return $this->db->insert_id();

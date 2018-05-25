@@ -4,7 +4,7 @@ class Procesador extends CI_Controller
 {
      function __construct() {
         parent::__construct();
-        $this->load->model('estacion');
+        $this->load->model('station');
         //Funciones de redirección
         $this->load->helper('url');
     }
@@ -13,7 +13,7 @@ class Procesador extends CI_Controller
     public function index(){
         $data = array();
         
-        $data['estacion'] = $this->estacion-> obtenerListado();
+        $data['station'] = $this->station-> obtenerListado();
         $data['titulo'] = 'Mis Rutas';
         
         $this->load->view('Formulario', $data);
@@ -30,19 +30,19 @@ class Procesador extends CI_Controller
       
         
         $datosFormulario = array(
-                'estacion' => $this->input->post('estacion'),
-                'descripcion' => $this->input->post('descripcion'),
-                'latitud' => $this->input->post('latitud'),
-                'longitud' => $this->input->post('longitud')
+                'station' => $this->input->post('station'),
+                'description' => $this->input->post('description'),
+                'latitude' => $this->input->post('latitude'),
+                'length' => $this->input->post('length')
             );
         
-        $insertar = $this->estacion->insertarRuta($datosFormulario);
+        $insertar = $this->station->insertarRuta($datosFormulario);
        
             
            
         $data['post'] = $datosFormulario;
         $data['title'] = 'Crear Ruta';
-        $data['action'] = 'agregar';
+        $data['action'] = 'Add';
         
         $this->load->view('FormularioRuta', $data);
         
